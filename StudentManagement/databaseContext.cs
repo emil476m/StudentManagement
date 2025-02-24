@@ -21,4 +21,17 @@ public class DatabaseContext : DbContext
     }
     protected override void OnConfiguring(DbContextOptionsBuilder options)
         => options.UseSqlite($"Data Source={DbPath}");
+    
+    
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Enrollment>()
+            .HasOne<Student>(s => s.Student);
+        
+        
+        modelBuilder.Entity<Enrollment>()
+            .HasOne(s => s.Course);
+        
+        
+    }
 }
