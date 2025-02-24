@@ -32,7 +32,7 @@ CREATE INDEX "IX_Enrollments_CourseId" ON "Enrollments" ("CourseId");
 CREATE INDEX "IX_Enrollments_StudentId" ON "Enrollments" ("StudentId");
 
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
-VALUES ('20250224122546_InitialCreate', '9.0.2');
+VALUES ('20250224123258_V0__InitialCreate', '9.0.2');
 
 COMMIT;
 
