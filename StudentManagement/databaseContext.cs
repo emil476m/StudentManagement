@@ -11,7 +11,7 @@ public class DatabaseContext : DbContext
     
     public string DbPath { get; }
 
-    protected DatabaseContext()
+    public DatabaseContext()
     {
         var folder = Environment.SpecialFolder.LocalApplicationData;
         var path = Environment.GetFolderPath(folder);
