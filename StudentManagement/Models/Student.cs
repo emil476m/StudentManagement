@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Runtime.InteropServices.JavaScript;
 
 namespace StudentManagement.Models;
 
@@ -9,5 +9,6 @@ public class Student
     public string MiddleName { get; set; }
     public string LastName { get; set; }
     public string Email { get; set; }
+    public DateOnly DateOfBirth { get; set; }
     public DateTime EnrollmentDate { get; set; }
 }
