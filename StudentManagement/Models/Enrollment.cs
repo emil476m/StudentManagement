@@ -8,5 +8,5 @@ public class Enrollment
     public Student Student { get; set; }
     
     public Course Course { get; set; }
-    public string Grade { get; set; }
+    public string FinalGrade { get; set; }
 }
