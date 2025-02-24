@@ -8,6 +8,7 @@ public class DatabaseContext : DbContext
     public DbSet<Course> Courses { get; set; }
     public DbSet<Enrollment> Enrollments { get; set; }
     public DbSet<Student> Students { get; set; }
+    public DbSet<Instructor> Instructors { get; set; }
     
     public string DbPath { get; }
 
@@ -30,8 +31,9 @@ public class DatabaseContext : DbContext
         
         
         modelBuilder.Entity<Enrollment>()
-            .HasOne(s => s.Course);
-        
-        
+            .HasOne<Course>(s => s.Course);
+
+        modelBuilder.Entity<Course>()
+            .HasOne<Instructor>(e => e.Instructor);
     }
 }
