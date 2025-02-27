@@ -9,6 +9,7 @@ public class DatabaseContext : DbContext
     public DbSet<Enrollment> Enrollments { get; set; }
     public DbSet<Student> Students { get; set; }
     public DbSet<Instructor> Instructors { get; set; }
+    public DbSet<Department> Departments { get; set; }
     
     public string DbPath { get; }
 
@@ -35,5 +36,8 @@ public class DatabaseContext : DbContext
 
         modelBuilder.Entity<Course>()
             .HasOne<Instructor>(e => e.Instructor);
+        
+        modelBuilder.Entity<Department>()
+            .HasOne<Instructor>(e => e.DepartmentHead);
     }
 }
