@@ -1,4 +1,14 @@
-USE StudentMManagementDB
+USE master;
+
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'StudentManagementDB')
+BEGIN
+    CREATE DATABASE StudentManagementDB;
+END;
+
+GO
+
+USE StudentManagementDB
+
 
 IF OBJECT_ID('Student', 'U') IS NULL
 BEGIN
