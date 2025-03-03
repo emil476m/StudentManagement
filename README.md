@@ -20,3 +20,6 @@ the new model to 1 month or week after the change.
 
 This is basically the same solution's as we did in with the entity framework,
 do to our belief that this is a sustainable solution with the renaming of one default variable.
+
+* SB Opgave 7
+We have chosen destructive measures again. The course credits references ects points. in this measure it doesn't really matter if these are decimal or integers as students cant have any real effect on the outcome of this. we have also chosen destructive measures, as going from decimal to integers for a course credit might have been overkill using none destructive measures.
